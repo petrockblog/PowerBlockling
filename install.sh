@@ -28,12 +28,12 @@ function prepare() {
 }
 
 function installFiles() {
-    install --mode 0755 scripts/powerblockservice /usr/bin/powerblocklingservice
+    install --mode 0755 scripts/powerblocklingservice /usr/bin/powerblocklingservice
 }
 
 function installService() {
     grep -qxF 'enable_uart=1' /boot/config.txt || echo 'enable_uart=1' >> /boot/config.txt
-    
+
     install -m 0755 scripts/powerblockling /etc/init.d
     update-rc.d powerblockling defaults
     /etc/init.d/powerblockling start
