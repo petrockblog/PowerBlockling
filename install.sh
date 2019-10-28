@@ -2,7 +2,7 @@
 
 function installService() {
     grep -qxF 'enable_uart=1' /boot/config.txt || echo 'enable_uart=1' >> /boot/config.txt
-    grep -qxF 'dtoverlay=gpio-shutdown,gpio_pin=3' /boot/config.txt || echo 'dtoverlay=gpio-shutdown,gpio_pin=3' >> /boot/config.txt
+    grep -qxF 'dtoverlay=gpio-shutdown,gpio_pin=3,active_low=1' /boot/config.txt || echo 'dtoverlay=gpio-shutdown,gpio_pin=3,active_low=1' >> /boot/config.txt
 
     echo "Installation of PowerBlockling service done. Please REBOOT to activate changes."
 }

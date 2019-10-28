@@ -2,7 +2,7 @@
 
 function uninstallService() {
 	sed -i s/enable_uart=1//g /boot/config.txt
-	sed -i s/dtoverlay=gpio-shutdown,gpio_pin=3//g /boot/config.txt
+	sed -i s/dtoverlay=gpio-shutdown,gpio_pin=3,active_low=1//g /boot/config.txt
 }
 
 # check, if sudo is used
