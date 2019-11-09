@@ -17,7 +17,7 @@ To run the quick installation, you just need to call this one line from the Rasp
 wget -O - https://raw.githubusercontent.com/petrockblog/PowerBlockling/master/install.sh | sudo bash
 ```
 
-To uninstall the service you can simply call `sudo ./uninstall.sh` from within the `PowerBlock` directory.
+To uninstall the service you can simply call `sudo ./uninstall.sh` from within the `PowerBlockling` directory.
 
 
 <br><br>
